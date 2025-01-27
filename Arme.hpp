@@ -7,7 +7,7 @@ class Arme
     //constructeur
     Arme();
     //constructeur de copie
-    Arme(std::string nomArme, int, degats);
+    Arme(std::string nomArme, int degats);
     void changer(std::string nomArme, int degats);
     void afficher() const;
 
