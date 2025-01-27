@@ -4,7 +4,9 @@
 class Arme
 {
     public:
+    //constructeur
     Arme();
+    //constructeur de copie
     Arme(std::string nomArme, int, degats);
     void changer(std::string nomArme, int degats);
     void afficher() const;
