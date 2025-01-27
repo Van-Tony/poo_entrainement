@@ -3,6 +3,10 @@
 
 class Arme
 {
+    public:
+    Arme();
+    Arme(std::string nomArme, int, degats);
+    void changer(std::string nomArme, int degats);
 
 };
 
