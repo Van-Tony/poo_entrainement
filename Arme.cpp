@@ -7,3 +7,9 @@ Arme::Arme() : m_nomArme("Epee en bois"), int m_degats(10)
 {
 
 }
+
+// implémentation du constructeur de copie de la classe Arme
+Arme::Arme(string nomArme, int degats) : m_nomArme(nomArme), m_degats(degats)
+{
+
+}
