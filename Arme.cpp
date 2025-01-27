@@ -14,3 +14,9 @@ Arme::Arme(string nomArme, int degats) : m_nomArme(nomArme), m_degats(degats)
 {
 
 }
+
+// méthode qui affiche quelle arme est utilisée et son nombre de dégats
+void Arme::afficher() const
+{
+    cout << "Arme : " << m_nomArme << " (Degats : " << m_degats << endl;
+}
