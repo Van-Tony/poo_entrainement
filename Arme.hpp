@@ -13,7 +13,7 @@ class Arme
 
     private:
     std::string m_nomArme;
-        int m_degats;
+    int m_degats;
 };
 
 #endif // ARME_HPP
