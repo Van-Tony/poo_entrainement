@@ -1,10 +1,15 @@
 #include <string>
+#include "Personnage.hpp"
 
     // constructeur
-    Personnage::Personnage() : m_nomArme(nomArme),m_degatsArme(degatsArme), m_nbDeMana(100), m_ptDeVie(ptDeVie)
+    Personnage::Personnage() : m_nom("Tony"), m_ptDeMana(100), m_ptDeVie(100)
         {
 
         }
+
+    //constructeur surchargé
+    Personnage::Personnage(std::string m_nom) : m_nom(m_nom) m_ptDeMana(100), m_ptDeVie(100)
+
     //méthodes
     void attaquer(Personnage &cible)
     {
