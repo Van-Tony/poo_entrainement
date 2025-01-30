@@ -12,7 +12,7 @@ class Arme
     void afficher() const;
 
     private:
-    std::string m_nomArme;
+    std::string m_nom;
     int m_degats;
 };
 
