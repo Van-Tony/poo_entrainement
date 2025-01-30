@@ -2,13 +2,20 @@
 #include "Personnage.hpp"
 
     // constructeur
-    Personnage::Personnage() : m_nom("Tony"), m_ptDeMana(100), m_ptDeVie(100)
-        {
+    Personnage::Personnage() : m_nom("Tony"), m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    {
 
-        }
+    }
+    // constructeur de copie
+    Personnage::Personnage(Personnage &cible) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    {
 
+    }
     //constructeur surchargé
-    Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100)
+    Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    {
+
+    }
 
     //méthodes
      void afficherEtat() const
