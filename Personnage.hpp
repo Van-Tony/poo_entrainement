@@ -7,7 +7,7 @@ class Personnage
 {
 public:
     //constructeur
-    Personnage(std::string nomArme, int degatsArme, int ptDeVie);
+    Personnage();
     //méthodes
     void attaquer(Personnage &cible);
 
@@ -23,8 +23,7 @@ public:
 private:
     int m_ptDeVie;
     int m_ptDeMana;
-    std::string m_nomArme;
-    int m_degatsArme;
+    std::string m_nom;
 };
 
 #endif // PERSONNAGE_HPP
