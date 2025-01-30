@@ -11,6 +11,14 @@
     Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100)
 
     //méthodes
+     void afficherEtat()
+    {
+        std::cout << "Nom du personnage : " << m_nom << endl;
+        std::cout << "Points de mana : " << m_ptDeMana << endl;
+        std::cout << "Points de vie : " << m_ptDeVie << endl;
+        m_arme.Afficher();
+    }
+
     void attaquer(Personnage &cible)
     {
         cible.recevoirDegats(nbDegats);
