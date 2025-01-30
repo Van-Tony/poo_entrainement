@@ -8,7 +8,7 @@
         }
 
     //constructeur surchargé
-    Personnage::Personnage(std::string m_nom) : m_nom(m_nom) m_ptDeMana(100), m_ptDeVie(100)
+    Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100)
 
     //méthodes
     void attaquer(Personnage &cible)
