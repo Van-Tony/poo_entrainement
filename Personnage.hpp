@@ -22,12 +22,13 @@ public:
     changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
 
     bool estVivant();
-
+    void afficherEtat();
     //attributs (variables membres)
 private:
     int m_ptDeVie;
     int m_ptDeMana;
     std::string m_nom;
+    int nbDegats;
     Arme m_arme;
 };
 
