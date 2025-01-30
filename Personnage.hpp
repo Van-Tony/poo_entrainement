@@ -8,6 +8,9 @@ class Personnage
 public:
     //constructeur
     Personnage();
+
+    //constructeur surchargé
+    Personnage(string nomPersonnage);
     //méthodes
     void attaquer(Personnage &cible);
 
