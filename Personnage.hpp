@@ -2,6 +2,7 @@
 #define PERSONNAGE_HPP
 
 #include <string>
+#include "Arme.hpp"
 
 class Personnage
 {
