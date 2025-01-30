@@ -21,7 +21,8 @@ Arme::Arme(string nom, int degats) : m_nom(nom), m_degats(degats)
 // méthode qui affiche quelle arme est utilisée et son nombre de dégats
 void Arme::afficher() const
 {
-    cout << "Arme : " << m_nom << " Degats : " << m_degats << endl;
+    cout << "Arme : " << m_nom << endl;
+    cout << "Degats : " << m_degats << endl;
 }
 
 void Arme::changer(std::string nomArme, int degats)
