@@ -28,6 +28,7 @@ private:
     int m_ptDeVie;
     int m_ptDeMana;
     std::string m_nom;
+    Arme m_arme;
 };
 
 #endif // PERSONNAGE_HPP
