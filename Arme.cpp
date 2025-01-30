@@ -4,13 +4,13 @@
 using namespace std;
 
 // implémentation du constructeur par défaut de la classe Arme
-Arme::Arme() : m_nomArme("Epee en bois"), m_degats(10)
+Arme::Arme() : m_nom("Epee en bois"), m_degats(10)
 {
 
 }
 
 // implémentation du constructeur de copie de la classe Arme
-Arme::Arme(string nomArme, int degats) : m_nomArme(nomArme), m_degats(degats)
+Arme::Arme(string nom, int degats) : m_nom(nomArme), m_degats(degats)
 {
 
 }
@@ -18,5 +18,5 @@ Arme::Arme(string nomArme, int degats) : m_nomArme(nomArme), m_degats(degats)
 // méthode qui affiche quelle arme est utilisée et son nombre de dégats
 void Arme::afficher() const
 {
-    cout << "Arme : " << m_nomArme << " (Degats : " << m_degats << endl;
+    cout << "Arme : " << m_nom << " (Degats : " << m_degats << endl;
 }
