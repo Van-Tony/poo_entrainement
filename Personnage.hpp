@@ -1,9 +1,10 @@
+// fichier Personnage.hpp
 #ifndef PERSONNAGE_HPP
 #define PERSONNAGE_HPP
 
 #include <string>
 #include "Arme.hpp"
-
+#include <iostream>
 class Personnage
 {
 public:
@@ -11,24 +12,25 @@ public:
     Personnage();
 
     //constructeur surchargé
-    Personnage(string nomPersonnage);
+    Personnage(std::string nomPersonnage);
+
+    //constructeur de copie
+    Personnage(Personnage &cible);
     //méthodes
     void attaquer(Personnage &cible);
 
     void recevoirDegats(int nbDegats);
 
-    boirePotionDeVie(int quantitePotion);
-
-    changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
+    void boirePotionDeVie(int quantitePotion);
 
     bool estVivant();
-    void afficherEtat();
+    void afficherEtat() const;
     //attributs (variables membres)
 private:
     int m_ptDeVie;
     int m_ptDeMana;
     std::string m_nom;
-    int nbDegats;
+    int m_nbDegats;
     Arme m_arme;
 };
 

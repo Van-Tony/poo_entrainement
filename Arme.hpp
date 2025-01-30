@@ -1,6 +1,9 @@
+// fichier Arme.hpp
+
 #ifndef ARME_HPP
 #define ARME_HPP
 #include <string>
+#include <iostream>
 class Arme
 {
     public:

@@ -1,37 +1,39 @@
+// fichier Personnage.cpp
+
 #include <string>
 #include "Personnage.hpp"
 
     // constructeur
-    Personnage::Personnage() : m_nom("Tony"), m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    Personnage::Personnage() : m_nom("Tony"), m_ptDeMana(100), m_ptDeVie(100), m_nbDegats(10)
     {
 
     }
     // constructeur de copie
-    Personnage::Personnage(Personnage &cible) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    Personnage::Personnage(Personnage &cible) : m_nom(cible.m_nom), m_ptDeMana(100), m_ptDeVie(100), m_nbDegats(10)
     {
 
     }
     //constructeur surchargé
-    Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100), nbDegats(10)
+    Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage), m_ptDeMana(100), m_ptDeVie(100), m_nbDegats(10)
     {
 
     }
 
     //méthodes
-     void afficherEtat() const
+     void Personnage::afficherEtat() const
     {
-        std::cout << "Nom du personnage : " << m_nom << endl;
-        std::cout << "Points de mana : " << m_ptDeMana << endl;
-        std::cout << "Points de vie : " << m_ptDeVie << endl;
-        m_arme.Afficher();
+        std::cout << "Nom du personnage : " << m_nom << std::endl;
+        std::cout << "Points de mana : " << m_ptDeMana << std::endl;
+        std::cout << "Points de vie : " << m_ptDeVie << std::endl;
+        m_arme.afficher();
     }
 
-    void attaquer(Personnage &cible)
+    void Personnage::attaquer(Personnage &cible)
     {
-        cible.recevoirDegats(nbDegats);
+        cible.recevoirDegats(m_nbDegats);
     }
 
-    void recevoirDegats(int nbDegats)
+    void Personnage::recevoirDegats(int nbDegats)
     {
         m_ptDeVie -= nbDegats;
         if(m_ptDeVie < 0)
@@ -40,18 +42,14 @@
         }
     }
 
-    void boirePotionDeVie(int quantitePotion)
+    void Personnage::boirePotionDeVie(int quantitePotion)
     {
-        m_ptDeVie += 20;
+        m_ptDeVie += quantitePotion;
     }
 
-    void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme)
-    {
-        m_nomArme = nomNouvelleArme;
-        m_degatsArme = degatsNouvelleArme;
-    }
 
-    bool estVivant()
+
+    bool Personnage::estVivant()
     {
         return m_ptDeVie > 0;
     }
