@@ -11,7 +11,7 @@
     Personnage::Personnage(std::string nomPersonnage) : m_nom(nomPersonnage) m_ptDeMana(100), m_ptDeVie(100)
 
     //méthodes
-     void afficherEtat()
+     void afficherEtat() const
     {
         std::cout << "Nom du personnage : " << m_nom << endl;
         std::cout << "Points de mana : " << m_ptDeMana << endl;
